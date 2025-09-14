@@ -1,0 +1,42 @@
+<header class="nav">
+  <div class="logo">Pelatas</div>
+  
+  <div class="nav-buttons">
+    <a class="nav-link" href="trainer-signup.html">Join as Trainer</a>
+    <a class="nav-link" href="signin.html">Sign In</a>
+    <a class="signup" href="signup.html">Sign Up</a>
+  </div>
+</header>
+
+CSS part
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px; /* spacing between buttons */
+}
+
+.nav-link {
+  color: #FF6B3D; /* same orange as Pelatas logo */
+  text-decoration: none;
+  font-family: 'Georgia', serif; /* same font style as Pelatas */
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.signup {
+  background-color: #FF6B3D;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}

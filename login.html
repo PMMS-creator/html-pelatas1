@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Log in • Pelatas</title>
+
+  <style>
+    :root{
+      --bg:#F3E6D9;          /* soft beige */
+      --card:#F8F1E8;        /* lighter beige for inputs */
+      --text:#1E2A25;        /* deep green/charcoal */
+      --muted:#6C6C6C;       /* placeholder text */
+      --orange:#FF6B3D;      /* Pelatas orange */
+      --orange-d:#E55B2F;    /* hover */
+      --radius:26px;         /* rounded feel */
+      --shadow:0 10px 28px rgba(0,0,0,.08);
+    }
+
+    html,body{
+      height:100%;
+      background:var(--bg);
+      color:var(--text);
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+    }
+
+    .panel{
+      width:100%;
+      max-width:520px;
+      text-align:center;
+    }
+
+    h1{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight:700;
+      line-height:1.05;
+      margin:0 0 28px;
+      letter-spacing:.2px;
+    }
+
+    form{
+      display:grid;
+      gap:18px;
+    }
+
+    .field{
+      text-align:left;
+    }
+
+    label{
+      position:absolute;
+      left:-9999px; /* keep accessible for screen readers */
+    }
+
+    input[type="email"],
+    input[type="password"]{
+      width:100%;
+      padding:20px 22px;
+      border:0;
+      outline:0;
+      background:var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      font-size:20px;
+      color:var(--text);
+    }
+
+    input::placeholder{ color:var(--muted); }
+
+    input:focus{
+      box-shadow: 0 0 0 3px rgba(255,107,61,.2), var(--shadow);
+    }
+
+    .btn{
+      appearance:none;
+      border:0;
+      cursor:pointer;
+      padding:18px 26px;
+      border-radius: calc(var(--radius) + 6px);
+      font-weight:700;
+      font-size:22px;
+      background:var(--orange);
+      color:#fff;
+      box-shadow: var(--shadow);
+      transition: transform .03s ease, background .15s ease;
+    }
+    .btn:hover{ background:var(--orange-d); }
+    .btn:active{ transform: translateY(1px); }
+
+    .links{
+      margin-top:12px;
+      font-size:20px;
+    }
+    .links a{
+      color:var(--text);
+      text-decoration:none;
+    }
+    .links a:hover{ text-decoration:underline; }
+
+    .divider{
+      height:28px;
+    }
+
+    .signup{
+      margin-top:14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(22px, 3.8vw, 36px);
+      line-height:1.35;
+    }
+    .signup a{
+      display:inline-block;
+      margin-top:6px;
+      color:var(--text);
+      text-decoration: none;
+      border-bottom: 2px solid rgba(30,42,37,.3);
+      padding-bottom:2px;
+    }
+    .signup a:hover{ border-bottom-color: var(--text); }
+
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="panel">
+      <h1>Log in</h1>
+
+      <form action="#" method="post" autocomplete="on">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Password" required>
+        </div>
+
+        <button class="btn" type="submit">Log in</button>
+
+        <div class="links">
+          <a href="forgot-password.html">Forgot password?</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="signup">
+          Don’t have an account? <br />
+          <a href="signup.html">Sign up</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
